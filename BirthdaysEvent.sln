@@ -5,9 +5,9 @@ VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdaysEvent.Persistence", "BirthdaysEvent.Persistence\BirthdaysEvent.Persistence.csproj", "{5C479812-273D-45A0-943E-5DA8BDEF0372}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdaysEvents.UnitTest", "BirthdaysEvents.UnitTest\BirthdaysEvents.UnitTest.csproj", "{D4D36DD3-96BC-488A-A61B-BA4E15997A62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdaysEvent.UnitTest", "BirthdaysEvents.UnitTest\BirthdaysEvent.UnitTest.csproj", "{D4D36DD3-96BC-488A-A61B-BA4E15997A62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdaysEvents.Domain", "BirthdaysEvents.Domain\BirthdaysEvents.Domain.csproj", "{4B1DEA69-D54E-40A4-89B4-0B4266BBDD52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdaysEvent.Domain", "BirthdaysEvents.Domain\BirthdaysEvent.Domain.csproj", "{4B1DEA69-D54E-40A4-89B4-0B4266BBDD52}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D6B60A66
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{A724F1B5-5199-4422-9965-DEBED711F585}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birthdays.Application", "Birthdays.Application\Birthdays.Application.csproj", "{15C91796-22D6-4436-87EC-9628283720E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdaysEvent.Application", "Birthdays.Application\BirthdaysEvent.Application.csproj", "{15C91796-22D6-4436-87EC-9628283720E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{BE6E1F18-E6B0-4ED6-8AEA-11B8B80C3871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdaysEvents.Api", "BirthdaysEvents.Api\BirthdaysEvents.Api.csproj", "{07FEC9DB-98B0-4AFA-B9BC-82B18D3679E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdaysEvent.Api", "BirthdaysEvents.Api\BirthdaysEvent.Api.csproj", "{07FEC9DB-98B0-4AFA-B9BC-82B18D3679E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{E3F9931E-FD21-4DD8-A163-777A267588E4}"
 EndProject
