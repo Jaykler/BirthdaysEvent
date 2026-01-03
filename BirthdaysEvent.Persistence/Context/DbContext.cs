@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using BirthdaysEvent.Persistence.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BirthdaysEvent.Persistence.Models;
+namespace BirthdaysEvent.Persistence.Context;
 
 public partial class BirthdaysEventsDBContext : DbContext
 {
