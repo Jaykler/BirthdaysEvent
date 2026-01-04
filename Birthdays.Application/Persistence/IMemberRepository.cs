@@ -10,6 +10,12 @@ namespace BirthdaysEvent.Application.Persistence
     public interface IMemberRepository
     {
 
-        Task<Member> GetMemberByIdAsync(int memberId);
+        Task<Member> GetAllMember(int memberId);
+
+        Task<Member> GetMemberByNameAsync(string fullName);
+
+        Task<Member> AddMemberAsync(Member member);
+
+        Task<Member> RemoveMemberAsync(int id);
     }
 }
