@@ -15,6 +15,8 @@ namespace BirthdaysEvent.Application.Persistence
         Task<Member> GetMemberByNameAsync(string fullName);
 
         Task<Member> AddMemberAsync(Member member);
+        
+        Task<Member> UpdateMemberAsync(Member member);
 
         Task<Member> RemoveMemberAsync(int id);
     }
