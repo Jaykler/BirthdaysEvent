@@ -28,12 +28,18 @@ namespace BirthdaysEvent.Persistence.Repositories
 
             return members;
         }
-        public Task<Member> GetMemberByNameAsync(string fullName)
+        public Task<Member> GetMemberById(int id)
         {
+            using var conn = _dapperCon.CreateConnection();
+
+            var query = "SELECT * FROM Members WHERE Id = @Id";
+            // working here
             throw new NotImplementedException();
         }
         public async Task<Member> AddMemberAsync(Member member)
         {
+
+             
             _dbContext.Add(member);
             await _dbContext.SaveChangesAsync();
             return member;

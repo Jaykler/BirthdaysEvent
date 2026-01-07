@@ -1,9 +1,5 @@
 ﻿using BirthdaysEvent.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BirthdaysEvent.Application.Persistence
 {
@@ -12,7 +8,7 @@ namespace BirthdaysEvent.Application.Persistence
 
         Task<IEnumerable<Member>> GetAllMember();
 
-        Task<Member> GetMemberByNameAsync(string fullName);
+        Task<Member> GetMemberById(int id);
 
         Task<Member> AddMemberAsync(Member member);
         
