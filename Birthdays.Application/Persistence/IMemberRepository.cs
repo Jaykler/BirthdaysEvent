@@ -10,7 +10,7 @@ namespace BirthdaysEvent.Application.Persistence
     public interface IMemberRepository
     {
 
-        Task<Member> GetAllMember(int memberId);
+        Task<IEnumerable<Member>> GetAllMember();
 
         Task<Member> GetMemberByNameAsync(string fullName);
 

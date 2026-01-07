@@ -1,6 +1,8 @@
 ﻿
 
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using System.Data;
 
 namespace BirthdaysEvent.Persistence.Context
 {
@@ -14,6 +16,6 @@ namespace BirthdaysEvent.Persistence.Context
             _connectionString = configuration.GetConnectionString("BirthdaysEventsDBConnection")!;
         }
 
-
+        public IDbConnection CreateConnection() => new SqlConnection(_connectionString);
     }
 }
