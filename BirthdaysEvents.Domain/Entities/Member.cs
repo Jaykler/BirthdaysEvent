@@ -17,5 +17,7 @@ namespace BirthdaysEvent.Domain.Entities
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
 
+        public MemberStatus status { get; set; }
+
     }
 }

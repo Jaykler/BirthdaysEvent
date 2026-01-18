@@ -1,4 +1,5 @@
 ﻿using BirthdaysEvent.Application.Persistence;
+using BirthdaysEvent.Domain;
 using BirthdaysEvent.Domain.Entities;
 using BirthdaysEvent.Persistence.Context;
 using Dapper;
@@ -28,31 +29,43 @@ namespace BirthdaysEvent.Persistence.Repositories
 
             return members;
         }
-        public Task<Member> GetMemberById(int id)
+        public async Task<Member> GetMemberById(int id)
         {
             using var conn = _dapperCon.CreateConnection();
 
             var query = "SELECT * FROM Members WHERE Id = @Id";
+
+            var member = await conn.QuerySingleOrDefaultAsync<Member>(query, new { Id = id }, commandType: CommandType.Text);
             // working here
-            throw new NotImplementedException();
+            return member!;
         }
         public async Task<Member> AddMemberAsync(Member member)
         {
 
-             
             _dbContext.Add(member);
             await _dbContext.SaveChangesAsync();
             return member;
         }
 
-        public Task<Member> UpdateMemberAsync(Member member)
+        public async Task<Member> UpdateMemberAsync(Member member)
         {
-            throw new NotImplementedException();
+             _dbContext.Update(member);
+            await _dbContext.SaveChangesAsync();
+            return member;
         }
 
-        public Task<Member> RemoveMemberAsync(int id)
+        public async Task<Member> RemoveMemberAsync(int id)
         {
-            throw new NotImplementedException();
+            var member = await GetMemberById(id);
+            if (member == null)
+            {
+                throw new KeyNotFoundException($"Member with Id {id} not found.");
+            }
+            
+            member.status = MemberStatus.Deleted;
+            await _dbContext.SaveChangesAsync();
+
+            return member;
         }
 
         
